@@ -10,10 +10,11 @@ app.use(express.json({limit:"10mb"}));
 
 //routes
 const moviesRoute = require('./routes/moviesRoute');
-
+const usersRoute = require('./routes/usersRoute');
 
 
 app.use('/movies',moviesRoute);
+app.use('/users',usersRoute);
 
 app.get('/',(req,res)=>{
     res.send('root');
